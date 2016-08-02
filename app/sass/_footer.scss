@@ -1,0 +1,77 @@
+@import "variables";
+#main-footer  {
+  background-color:#032649 ;
+  min-height:320px ;
+  color: white;
+  position: relative;
+  font-size: 16px;
+   .footer-item{
+     display: table-cell;
+     text-align: center;
+     padding: 15px 20px;
+   }
+  .footer-img {
+    width: 70px;
+    height: 75px;
+    display: block;
+    margin: 0 auto;
+  }
+  #footer-info{
+    margin: 0 auto;
+  }
+  %footer-img {
+    background: {
+      position: center 50px;
+      repeat: no-repeat;
+    };
+  }
+  $footer-icon:(
+  phone:url("#{$imgPath}c_phone.png"),
+  email:url("#{$imgPath}c_email.png"),
+  skype:url("#{$imgPath}c_skype.png"),
+  adress:url("#{$imgPath}c_adress.png")
+  );
+  #f {
+    @each $item,$image in $footer-icon {
+      &-#{$item} {
+      background-image: $image;
+      @extend %footer-img
+    }
+    }
+  }
+
+  #footer-social {
+    width: 236px;
+    height: 56px;
+    display: block;
+    margin: auto;
+    clear: both;
+  }
+  .social-item{
+    width: 36px;
+    height: 36px;
+    padding: 50px 29px;
+    display: inline-block;
+  }
+  $footer-social:(
+        vk:url("#{$imgPath}soc_vk.png"),
+        tw: url("#{$imgPath}soc_tw.png"),
+        fb:url("#{$imgPath}soc_fb.png"),
+        gl:url("#{$imgPath}soc_gl.png")
+  );
+  #so {
+    @each $item,$image in $footer-social{
+      &-#{$item} {
+        background-image: $image;
+        @extend %footer-img
+    }
+    }
+  }
+  #footer-copiright {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+  }
+}
+

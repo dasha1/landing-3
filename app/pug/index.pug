@@ -1,0 +1,138 @@
+doctype html
+html(lang="ru")
+    head
+        include ./inc/_head
+    body
+        include ./inc/_header
+        section#top-content
+            .container
+                .row
+                    .top-text.col-lg-7.col-md-6.col-sm-12
+                        h1 ПРОДВИЖЕНИЕ САЙТА
+                        h3 БЫСТРО, НАДЕЖНО, ЭФФЕКТИВНО
+                    .top-img.col-lg-5.col-md-6.col-sm-12
+                        img(src=imgPath + "rocket.png")
+        section#features
+            .container
+                .row
+                    .feature-img.col-lg-6.col-md-6.col-sm-6.col-xs-12
+                        img(src=imgPath+"google-img.png")
+                    .feature-text.col-lg-6.col-md-6.col-sm-6.col-xs-12
+                        p Аудит сайта
+                        p Семантическое ядро
+                        p Внутренняя оптимизация
+                        p Вечные ссылки
+                        p Рост посещаемости и продаж
+                        p 6 месяцев - время вывода запросов
+        section#advertising-orange
+            .container
+                p.
+                    Контекстная реклама - это самый оперативный и простой способ првлечения целевой аудитории на сайт.
+                    Если настройка контекстной рекламы была проделана верно, то первый клиент из Google Awords или
+                    Яндекс Директ, придет в первий день показа рекламы.первый клиент из Google Awords или Яндекс Директ
+        section#order
+            ul#scene.scene
+                li.layer.stars(data-depth="0.50")
+                    img(src=imgPath+"footer-bg.png")
+                li.layer.rocket-right(data-depth="0.80")
+                    img(src=imgPath+"rocket-right.png")
+                li.layer.rocket-left(data-depth="0.80")
+                    img(src=imgPath + "rocket-left.png")
+                li.order-form.layer(data-depth="0.02")
+                    .order-blank
+                        h1 РАСЧЕТ СТОИМОСТИ
+                        .row
+                            .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                                input(type="text" placeholder="Ваше имя")
+                                input(type="text" placeholder="Контактный телефон")
+                                input(type="text" placeholder="E-mail")
+                                input(type="text" placeholder="Ссылка на сайт")
+                            .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                                .keywords
+                                    input(type="textarea"  placeholder="Ключевые слова, время показа и пр.")
+                                .button-rocket
+                                    button(type="button")
+                                        img(src=imgPath + "button-rocket.png")
+                                        h3 ЗАКАЗАТЬ
+        section#advertising-grey
+            .container
+                p.
+                    Контекстная реклама - это самый оперативный и простой способ првлечения целевой аудитории на сайт.
+                    Если настройка контекстной рекламы была проделана верно, то первый клиент из Google Awords или
+                    Яндекс Директ, придет в первий день показа рекламы.первый клиент из Google Awords или Яндекс Директ
+        section#results
+            .container
+                h1 РЕЗУЛЬТАТЫ
+                #carousel.owl-carousel
+                        img(src=imgPath+"results.png")
+                        img(src=imgPath+"results.png")
+                        img(src=imgPath+"results.png")
+        section#advertising-blue
+            .container
+                p.
+                    Контекстная реклама - это самый оперативный и простой способ првлечения целевой аудитории на сайт.
+                    Если настройка контекстной рекламы была проделана верно, то первый клиент из Google Awords или
+                    Яндекс Директ, придет в первий день показа рекламы.первый клиент из Google Awords или Яндекс Директ
+        section#clients
+            .container
+                h1 МЫ РАСКРУТИЛИ
+                - var n = 1
+                .row
+                    while n <= 4
+                        .col-lg-3.clients-item.col-md-3.col-sm-6.col-xs-6
+                            img(src=`${imgPath}client${n++}.png`).grayscale
+
+                - var n = 5
+                .row
+                    while n <= 8
+                        .col-lg-3.clients-item.col-md-3.col-sm-6.col-xs-6
+                            img(src=`${imgPath}client${n++}.png`).grayscale
+        section#advertising-white
+            .container
+                p.
+                    Seo оптимизированный текст – это текст, в котором содержатся ключевые запросы из поисковых систем. Целью написания таких текстов является привлечение посетителей и оптимизация целевой страницы сайта.
+                    Seo оптимизированный текст – это текст, в котором содержатся ключевые запросы из поисковых систем. Целью написания таких текстов является привлечение посетителей и оптимизация целевой страницы сайта.
+        section#space
+            ul#scene-button.scene
+                li.layer.stars(data-depth="0.5")
+                    img(src=imgPath + "footer-bg.png")
+                li.layer.planets(data-depth="0.80")
+                    img(src=imgPath + "planets.png")
+                li.layer.button-rocket-second
+                    button(type="button", data-toggle="modal", data-target="#myModal")
+                            img(src=imgPath + "button-rocket.png")
+                            h3 ЗАКАЗАТЬ
+        section#overly.google-map
+            .contact-phone
+                h3 (044)500-76-90
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.344560630928!2d30.475717315284083!3d50.43468239638261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ceb1535d8801%3A0xd8144182ba993c8b!2z0KHQvtC30LTQsNC90LjQtSDRgdCw0LnRgtC-0LIg0JrQuNC10LIgfCDQktC10LEt0YHRgtGD0LTQuNGPIFJlY2xhbWFyZQ!5e0!3m2!1sru!2sua!4v1469524753488" width="100%" height="542" frameborder="0" style="border:0" allowfullscreen></iframe>
+        section#advertising-light-grey
+            .container
+                p.
+                    Seo оптимизированный текст – это текст, в котором содержатся ключевые запросы из поисковых систем. Целью написания таких текстов является привлечение посетителей и оптимизация целевой страницы сайта.
+                    Seo оптимизированный текст – это текст, в котором содержатся ключевые запросы из поисковых систем. Целью написания таких текстов является привлечение посетителей и оптимизация целевой страницы сайта.
+
+        include ./inc/_footer
+        include ./inc/_scripts
+        .modal.fade#myModal(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                         button(type="button" class="close" data-dismiss="modal" aria-hidden="true")
+                            img(src=imgPath+"close.png")
+                         h1 ЗАКАЗАТЬ
+                    .modal-body
+                        .order-blank
+                            .row
+                                .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                                    input(type="text" placeholder="Ваше имя")
+                                    input(type="text" placeholder="Контактный телефон")
+                                    input(type="text" placeholder="E-mail")
+                                .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                                    .keywords
+                                        input(type="textarea"  placeholder="Комментарий")
+                                    .button-rocket
+                                        button(type="button")
+                                            img(src=imgPath + "button-rocket.png")
+                                            h3 ЗАКАЗАТЬ
+

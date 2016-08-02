@@ -1,0 +1,9 @@
+
+@mixin advertising($color,$font-color) {
+  background-color: $color;
+  height: 100%;
+  padding: 3% 0 3% 0;
+  color: $font-color;
+  text-align: justify;
+  font-size: 16px;
+}

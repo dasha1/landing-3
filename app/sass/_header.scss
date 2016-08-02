@@ -1,0 +1,123 @@
+@import "variables";
+header{
+  color: $white;
+  font-size: 16px;
+}
+#top {
+  height: 130px;
+  background-color: $top-color;
+  .navbar-default, .navbar-toggle{
+    background-color: $top-color;
+    border: none;
+  }
+}
+#nav-icon {position: relative; display: inline-block; width:35px; height:25px;}
+#nav-icon span { position: absolute; left: 0; top: 10px; }
+#nav-icon span,
+#nav-icon span:before,
+#nav-icon span:after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 45px;
+  background: white;
+  border-radius: 1px;
+  cursor: pointer;
+}
+#nav-icon span:before {
+  top: -10px;
+}
+#nav-icon span:after {
+  bottom: -10px;
+}
+#nav-icon span, #nav-icon span:before, #nav-icon span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-icon.active span {
+  background-color: transparent;
+}
+#nav-icon.active span:before, #nav-icon.active span:after {
+  top: 0;
+}
+#nav-icon.active span:before {
+  transform: rotate(45deg);
+}
+#nav-icon.active span:after {
+  transform: rotate(-45deg);
+}
+.navbar-brand {
+  position: relative;
+  float: left;
+  background-image: url("#{$imgPath}logo.png");
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 90px;
+  margin-top: 25px;
+}
+.navbar-toggle {
+  margin-top: 35px;
+  margin-right: 25px;
+}
+$contact-items: (
+    em:url("#{$imgPath}email.png"),
+    ph:url("#{$imgPath}phone.png"),
+    ad:url("#{$imgPath}adress.png"),
+    sk:url("#{$imgPath}skype.png")
+);
+
+#contact {
+  padding-top: 25px;
+  li:first-child{
+    padding-right: 70px;
+  }
+  .contact-items {
+    float: left;
+    .contact{
+    @each $item,$image in $contact-items {
+      &-#{$item} {
+             p:before {
+               content:$image;
+               padding: $padding;
+                      }
+                  }
+            }
+    }
+
+    p {
+      margin-top: 10px;
+      height: 30px;
+    }
+  }
+}
+@media (max-width: 767px){
+  #contact {
+    li:first-child {
+      padding-right: 0;
+    }
+   .contact {
+     @each $item,$image in $contact-items {
+       &-#{$item} {
+         p:before {
+           display: block;
+         }
+       }
+     }
+   }
+  }
+  .contact-items {
+    float: none !important;
+    text-align: center;
+    p {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  .navbar-collapse {
+    position: relative !important;
+    z-index: 1 !important;
+    border: none;
+    background-color: $top-content-color;
+  }
+}
+
